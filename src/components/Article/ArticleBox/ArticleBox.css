@@ -1,0 +1,110 @@
+.article-box {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 90%;
+  transition: 500ms;
+}
+.article-box .img-show {
+  position: relative;
+  overflow: hidden;
+}
+.article-box .img-show img {
+  width: 100%;
+  height: 100%;
+}
+.article-box .img-show > .btn {
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 12;
+  color: #d2b356;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  transition: 500ms;
+  padding: 0;
+  cursor: pointer;
+}
+.article-box .img-show > .btn:hover {
+  font-size: 25px;
+}
+.article-box .img-show > .btn:focus {
+  outline: 0;
+}
+.article-box .img-show:before {
+  content: '';
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+  background-image: linear-gradient(to bottom left, #f3f3f3 0, rgba(0, 0, 0, 0.0001) 55%);
+  opacity: 0;
+  transition: 500ms;
+}
+.article-box .header {
+  padding: 10px;
+}
+.article-box .header .title {
+  color: #282c34;
+  font-size: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-box .header > .textloading {
+  width: 50%;
+  height: 25px;
+  color: #f0ebda;
+  background-color: #f0ebda;
+}
+.article-box .header .stats {
+  display: flex;
+  justify-content: start;
+  opacity: 0;
+  transition: 500ms;
+  margin-top: 5px;
+}
+.article-box .header .stats button {
+  color: #282c34;
+  border-radius: 50px;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+.article-box .header .stats button i {
+  margin-right: 3px;
+}
+.article-box .header .stats button:hover {
+  color: #d2b356;
+  border-color: #d2b356;
+}
+.article-box .header .stats button:focus {
+  outline: 0;
+}
+.article-box:hover {
+  height: 100%;
+}
+.article-box:hover .img-show button {
+  padding: 20px;
+  opacity: 1;
+}
+.article-box:hover .img-show:before {
+  opacity: 1;
+}
+.article-box:hover .header .stats {
+  opacity: 1;
+}
+@media (max-width: 830px) {
+  .article-box {
+    height: 95%;
+  }
+}
+/*# sourceMappingURL=ArticleBox.css.map */

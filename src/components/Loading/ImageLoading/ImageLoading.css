@@ -1,0 +1,11 @@
+.image-loading {
+  position: absolute;
+}
+.image-loading-box {
+  min-width: 500px;
+}
+.image-loading[data-status="loading"] {
+  background-color: #f0ebda;
+  width: 100%;
+}
+/*# sourceMappingURL=ImageLoading.css.map */

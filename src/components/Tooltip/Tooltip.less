@@ -1,0 +1,81 @@
+.tooltip{
+  position: relative;
+}
+
+.tooltip:before{
+  display: none;
+  position: absolute;
+  z-index: 30;
+  border: 5px solid;
+  content: '';
+}
+.tooltip:after{
+  display: none;
+  position: absolute;
+  line-height: 40px;
+  z-index: 30;
+  white-space: nowrap;//不换行
+  color:white;
+  border-radius: 5px;
+  padding:0 10px;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #282c34;
+  content: attr(data-content);
+}
+//css属性选择器,tooltip在右侧出现
+.tooltip[data-placement="right"]:before{
+  top: calc(50% - 5px);
+  left: 100%;
+  border-color: transparent black transparent transparent;
+}
+.tooltip[data-placement="right"]:after{
+  top: calc(50% - 20px);
+  left: calc(100% + 10px);//注意大小为宽度+5pxborder宽度*2
+
+}
+//tooltip在左侧出现
+.tooltip[data-placement="left"]:before{
+  top: calc(50% - 5px);
+  right: 100%;
+  border-color:transparent transparent transparent black;
+}
+.tooltip[data-placement="left"]:after{
+  top: calc(50% - 20px);
+  right: calc(100% + 10px);//注意大小为宽度+5pxborder宽度*2
+
+}
+//tooltip在上侧出现
+.tooltip[data-placement="top"]:before{
+  bottom: 100%;
+  border-color:black transparent transparent transparent;
+}
+.tooltip[data-placement="top"]:after{
+  bottom: calc(100% + 10px);
+  left: -50%;
+}
+//tooltip在下侧出现
+.tooltip[data-placement="bottom"]:before{
+  top: 100%;
+  border-color:transparent transparent black transparent;
+
+}
+.tooltip[data-placement="bottom"]:after{
+  top: calc(100% + 10px);
+  left: -50%;
+}
+.tooltip:hover::after,.tooltip:hover::before{
+  display: inline;
+}
+//手机端时消失
+@media screen and (max-width: 830px) {
+  .tooltip[data-Adaptation="pc"]:before,.tooltip[data-Adaptation="pc"]:after{
+    display: none;
+  }
+}
+//电脑端时消失
+@media screen and (min-width: 830px) {
+  .tooltip[data-Adaptation="mb"]:before,.tooltip[data-Adaptation="mb"]:after{
+    display: none;
+  }
+}

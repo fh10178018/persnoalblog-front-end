@@ -1,0 +1,103 @@
+.sidebar{
+  width: 80px;
+  height: auto;
+  background-color: white;
+  position: relative;
+  z-index: 99;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05), 1px 0 rgba(0,0,0,0.05);
+  padding: 20px 10px;
+  color: #333;
+  ul{
+
+    list-style: none;
+
+    li{
+      line-height: 40px;
+      cursor: pointer; //鼠标悬停为手指
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      transition: 500ms;
+    }
+    li:hover{
+      background-color: #eeeeee;
+      font-size: 25px;
+      margin: 0 -10px;
+      padding: 0 10px;
+    }
+    .active{
+      font-size: 25px;
+      color: #d2b356;
+      border-color: #d2b356;
+    }
+  }
+  .sidebar-search{
+    position: relative;
+    margin-bottom: 20px;
+    button{
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+    button:focus{
+      outline: 0;
+    }
+    button:hover{
+      color: #d2b356;
+    }
+    .search-input{
+      position: absolute;
+      display: flex;
+      justify-content: start;
+      z-index: 20;
+      width: 50px;
+      overflow: hidden;
+      transition: 500ms;
+      border: 1px solid #e5e5e5;
+      left: 0;
+      top: 0;
+      border-radius: 5px;
+      visibility:hidden;
+      button{
+        border:0;
+        border-radius: 0;
+      }
+      .search-form{
+        input{
+          border-radius: 0;
+          background-color: white;
+        }
+      }
+    }
+    >.active{
+      visibility:visible;
+      width: 310px;
+    }
+  }
+}
+@media screen and (max-width: 830px){
+  .sidebar{
+    float: left;
+    min-width: 100%;
+    padding: 0 20px;
+    .sidebar-search{
+      display: none;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      li{
+        flex: 1;
+        text-align: center;
+      }
+      .active{
+        border-bottom: 3px solid;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+:root {
+  --main-background-color: #f4f4f4;
+  --main-color: white;
+  --main-font-color: #333;
+  --theme-color: #d2b356;
+  /*全局定义主题颜色变量 默认*/
+  --lighter-color: #d2b356;
+}
+/*box-sizing:border-box;宽高会加上padding和border的值，也就是把padding和border算在content内*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: var(--main-background-color);
+}
+/*流式布局容器,让子容器宽度随着父容器变化而变化*/
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*!important;强制提升优先级为最高*/
+.m-0 {
+  margin: 0 !important;
+}
+.p-0 {
+  padding: 0 !important;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+.golden {
+  color: #d2b356 !important;
+}
+.gray {
+  color: #f4f4f4 !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  transition: 0.8s;
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d2b356;
+}
+::-webkit-scrollbar-track-piece {
+  background: 0 0;
+}
+/*# sourceMappingURL=main.css.map */

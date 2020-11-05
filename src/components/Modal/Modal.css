@@ -1,0 +1,61 @@
+.modal {
+  width: 80%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2000;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  height: max-content;
+  grid-template-areas: "header" "content" "footer";
+  transition: 500ms;
+}
+.modal .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+.modal .close-btn:hover {
+  color: #d2b356;
+}
+.modal .close-btn:focus {
+  outline: 0;
+}
+.modal-fade {
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e5e5e5;
+  opacity: 0.6;
+  z-index: 1000;
+}
+@media screen and (max-width: 830px) {
+  .modal {
+    width: 100%;
+    top: auto;
+    border-radius: 20px 20px 0 0;
+  }
+}
+/*# sourceMappingURL=Modal.css.map */

@@ -1,0 +1,24 @@
+.ant-dropdown {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  transition: 500ms;
+  overflow: hidden;
+}
+.ant-dropdown[data-placement="top"] {
+  top: 60px;
+}
+.ant-dropdown[data-placement="bottom"] {
+  bottom: 0;
+}
+@media screen and (max-width: 830px) {
+  .ant-dropdown[data-Adaptation="pc"] {
+    display: none;
+  }
+}
+@media screen and (min-width: 830px) {
+  .ant-dropdown[data-Adaptation="pc"] {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Dropdown.css.map */

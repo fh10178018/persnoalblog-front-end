@@ -1,0 +1,50 @@
+.scrollup {
+  position: fixed;
+  z-index: 20;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  color: #666;
+  transition: 500ms;
+  cursor: pointer;
+}
+.scrollup i {
+  font-weight: 900;
+  font-size: 38px;
+}
+.scrollup:hover {
+  bottom: 25px;
+  color: #d2b356;
+}
+.down-in {
+  animation: downIn 0.3s both;
+}
+@keyframes downIn {
+  from {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.down-out {
+  animation: downOut 0.3s both;
+}
+@keyframes downOut {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=ScrollUp.css.map */

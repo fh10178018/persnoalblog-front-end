@@ -1,0 +1,101 @@
+.header-box {
+  grid-area: header;
+}
+.header-box header {
+  background: white;
+  position: relative;
+  height: 100%;
+  z-index: 101;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 1px 0 rgba(0, 0, 0, 0.05);
+}
+.header-box header .header-top {
+  padding: 20px 30px;
+  transition: 500ms;
+}
+.header-box header .header-top .description {
+  color: #888;
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 16px;
+  font-weight: 300;
+}
+.header-box header .header-top .who-icon {
+  float: left;
+  display: none;
+  width: 50px;
+}
+.header-box header .header-top .recent-post {
+  margin: 0 -30px;
+  padding: 0 30px;
+  border-top: 1px solid #eeeeee;
+}
+.header-box header .header-top .recent-post ul {
+  list-style: none;
+}
+.header-box header .header-top .recent-post ul li {
+  color: #999;
+  padding: 7px 0 ;
+  cursor: pointer;
+}
+.header-box header .header-top .recent-post ul li > .active {
+  color: #d2b356;
+}
+.header-box header .header-top .recent-post ul li:hover a {
+  color: #d2b356;
+}
+.header-box header .header-top .input-search {
+  display: none;
+  flex: 1;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.header-box header .header-bottom {
+  padding: 5px 20px;
+  display: none;
+  line-height: 50px;
+  transition: 500ms;
+}
+@media screen and (max-width: 830px) {
+  .header-box header {
+    float: left;
+    height: 60px;
+    min-width: 100%;
+    overflow: hidden;
+    position: fixed;
+  }
+  .header-box header .header-top {
+    transform: translateY(0%);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-box header .header-top .input-search,
+  .header-box header .header-top .dropdown,
+  .header-box header .header-top .logo-icon {
+    display: block;
+  }
+  .header-box header .header-top .description,
+  .header-box header .header-top .recent-post {
+    display: none;
+  }
+  .header-box header .header-bottom {
+    transform: translateY(0%);
+    display: block;
+  }
+  .header-box header .transformY {
+    transform: translateY(-100%);
+  }
+  .header-box .ant-dropdown > .navbar-content {
+    padding: 0 20px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    height: 112px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transition: 500ms;
+  }
+}
+/*# sourceMappingURL=Header.css.map */

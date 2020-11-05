@@ -1,0 +1,21 @@
+.box{
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 85vh;
+  grid-template-areas: 'header page';
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 830px){
+  .box{
+    grid-template-columns:auto;
+    grid-template-rows: 60px calc(100vh - 60px);
+    grid-template-areas: 'header'
+                            'page';
+    border-radius: 0;
+    margin: 0 auto;
+  }
+}

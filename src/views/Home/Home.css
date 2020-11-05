@@ -1,0 +1,86 @@
+.home-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+.home-box > .btn {
+  top: 0;
+  background: transparent;
+  border: none;
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+  width: 80px;
+  height: 100%;
+  transition: 0.8s;
+}
+.home-box > .btn i {
+  color: #888888;
+  margin: 0 auto;
+  font-size: 30px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 5px;
+  width: 34px;
+  height: 34px;
+  transition: 0.8s;
+}
+.home-box > .btn:hover {
+  opacity: 0.5;
+}
+.home-box > .btn:hover i {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  color: #d2b356;
+}
+.home-box > .btn:focus {
+  outline: 0;
+}
+.home-box > .btn:before {
+  content: '';
+  width: 80px;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+}
+.home-box > .btn-previous:before {
+  left: 0;
+  background-image: linear-gradient(to right, #f3f3f3 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.home-box > .btn-next:before {
+  right: 0;
+  background-image: linear-gradient(to left, #f3f3f3 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.home-box > .btn-previous {
+  left: 0;
+}
+.home-box > .btn-next {
+  right: 0;
+}
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  width: 100%;
+  padding: 20px 50px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 50%));
+  padding: 0 20px;
+  grid-gap: 4rem 3rem;
+}
+@media (max-width: 830px) {
+  .home-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .home-box .btn {
+    position: static;
+  }
+  .home-box .grid-container {
+    grid-template-columns: minmax(0, 100%);
+  }
+}
+/*# sourceMappingURL=Home.css.map */

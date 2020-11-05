@@ -1,0 +1,75 @@
+.navbar{
+  .dropdown{
+    display: none;
+    cursor: pointer;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    i{
+      color: #111;
+      font-size: 25px;
+      transition: 800ms;
+    }
+    i:hover{
+      color: #d2b356;
+    }
+  }
+  .dropdown:focus{
+    outline:0;
+  }
+
+
+}
+.navbar-content{
+  >ul{
+    font-weight: bold;
+    font-size: 18px;
+    >li{
+      list-style: none;
+      line-height: 56px;
+      margin: 0 -30px;
+      cursor: pointer; //鼠标悬停为手指
+      transition: 0.8s;
+      >a{
+        color: #282c34;
+        text-decoration: none;
+        display: block;
+        padding: 0 30px;
+      }
+      >.active{
+        color: #d2b356;
+      }
+    }
+    >li:hover{
+      background: whitesmoke;
+      padding-left:30px;
+      font-size: 19px;
+      a{
+        color: #d2b356;
+      }
+    }
+  }
+}
+.nav-responsive{
+  display: none;
+  float: right;
+  line-height: 56px;
+}
+@media screen and (max-width: 830px) {//当设备屏幕小于max-width的值时，则满足条件，且注意权限大小，要将样式放在后边
+  .navbar{
+    >.navbar-content{
+      display: none;
+      position: fixed;
+      top: 60px;
+      padding: 0 20px;
+      left: 0;
+      background-color: white;
+      width: 100%;
+      overflow: hidden;
+      height: 112px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      z-index: -1;
+      transition: 500ms;
+    }
+  }
+}
